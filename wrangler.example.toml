@@ -1,0 +1,23 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "tf-backend-worker"
+main = "src/index.ts"
+compatibility_date = "2024-05-02"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+kv_namespaces = [
+  { binding = "KV_TFSTATE", id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" }
+]
+
+r2_buckets = [
+  { binding = "BUCKET_TFSTATE", bucket_name = "xxxxxxxx" }
+]
+
+[env.test]
+kv_namespaces = [
+  { binding = "KV_TFSTATE", id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" }
+]
+
+r2_buckets = [
+  { binding = "BUCKET_TFSTATE", bucket_name = "test" }
+]
