@@ -1,9 +1,9 @@
 {
   "name": "tf-backend-worker",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler deploy --minify --env production",
     "dev": "wrangler dev",
     "start": "wrangler dev",
     "test": "vitest --run",
