@@ -39,12 +39,11 @@ jobs:
           cat <<'EOF' > wrangler.toml
           ${{ secrets.WRANGLER_TOML }}
           EOF
-      - run: |
-          cat <<'EOF' > "$GITHUB_ENV"
-          ${{ secrets.SECRETS_PRODUCTION }}
-          EOF
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
+        env:
+          TF_HTTP_USERNAME: ${{ secrets.TF_HTTP_USERNAME }}
+          TF_HTTP_PASSWORD: ${{ secrets.TF_HTTP_PASSWORD }}
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
