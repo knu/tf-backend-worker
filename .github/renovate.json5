@@ -8,14 +8,9 @@
   schedule: ["after 9am and before 1pm on Saturday"],
   packageRules: [
     {
-      groupName: "patch updates",
-      matchDatasources: ["npm"],
-      matchUpdateTypes: ["patch", "digest"],
-    },
-    {
       groupName: "minor updates",
       matchDatasources: ["npm"],
-      matchUpdateTypes: ["minor"],
+      matchUpdateTypes: ["minor", "patch", "digest"],
     },
     {
       matchDatasources: ["npm"],
