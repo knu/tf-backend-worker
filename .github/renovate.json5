@@ -17,6 +17,16 @@
       rangeStrategy: "bump",
     },
   ],
+  regexManagers: [
+    {
+      fileMatch: ["^\\.github/.+/.+\\.yml$"],
+      matchStrings: [
+        "\\n\\s+wranglerVersion:\\s+[\"']?(?<currentValue>[^\"'\\s]+)[\"']?",
+      ],
+      datasourceTemplate: "npm",
+      depNameTemplate: "wrangler",
+    },
+  ],
   vulnerabilityAlerts: {
     enabled: true,
     addLabels: ["security"],

@@ -45,6 +45,7 @@ jobs:
           TF_HTTP_USERNAME: ${{ secrets.TF_HTTP_USERNAME }}
           TF_HTTP_PASSWORD: ${{ secrets.TF_HTTP_PASSWORD }}
         with:
+          wranglerVersion: "4.45.4"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy --minify
