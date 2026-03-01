@@ -17,9 +17,10 @@
       rangeStrategy: "bump",
     },
   ],
-  regexManagers: [
+  customManagers: [
     {
-      fileMatch: ["^\\.github/.+/.+\\.yml$"],
+      customType: "regex",
+      managerFilePatterns: ["/^\\.github/.+/.+\\.yml$/"],
       matchStrings: [
         "\\n\\s+wranglerVersion:\\s+[\"']?(?<currentValue>[^\"'\\s]+)[\"']?",
       ],
