@@ -5,9 +5,9 @@
     "moduleResolution": "Bundler",
     "lib": ["es2021"],
     "types": [
-      "vitest-globals",
+      "vitest/globals",
       "@cloudflare/workers-types",
-      "@cloudflare/vitest-pool-workers"
+      "@cloudflare/vitest-pool-workers/types"
     ],
     "isolatedModules": true,
     "resolveJsonModule": true,

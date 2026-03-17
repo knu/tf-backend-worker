@@ -1,12 +1,10 @@
-import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { env, SELF } from "cloudflare:test";
-import app from "../../src/tf-backend-worker/src";
-import type { Bindings } from "../../src/tf-backend-worker/src";
+import { describe, expect, it } from "vitest";
+import { SELF } from "cloudflare:test";
 
 describe("worker", () => {
   const authHeaders = (username: string, password: string) => {
     return {
-      Authorization: `Basic ${Buffer.from(`${username}:${password}`).toString("base64")}`,
+      Authorization: `Basic ${btoa(`${username}:${password}`)}`,
     };
   };
   const defaultHeaders = authHeaders("user", "pass");
@@ -30,7 +28,6 @@ describe("worker", () => {
           headers: {},
         });
 
-        console.log(await res.text());
         expect(res.status).toBe(401);
       });
     });
