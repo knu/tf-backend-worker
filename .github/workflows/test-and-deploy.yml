@@ -40,7 +40,7 @@ jobs:
           ${{ secrets.WRANGLER_TOML }}
           EOF
       - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         env:
           TF_HTTP_USERNAME: ${{ secrets.TF_HTTP_USERNAME }}
           TF_HTTP_PASSWORD: ${{ secrets.TF_HTTP_PASSWORD }}
