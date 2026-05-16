@@ -17,17 +17,6 @@
       rangeStrategy: "bump",
     },
   ],
-  customManagers: [
-    {
-      customType: "regex",
-      managerFilePatterns: ["/^\\.github/.+/.+\\.yml$/"],
-      matchStrings: [
-        "\\n\\s+wranglerVersion:\\s+[\"']?(?<currentValue>[^\"'\\s]+)[\"']?",
-      ],
-      datasourceTemplate: "npm",
-      depNameTemplate: "wrangler",
-    },
-  ],
   lockFileMaintenance: {
     enabled: true,
     schedule: ["after 9am and before 1pm on Sunday"],
