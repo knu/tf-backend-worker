@@ -7,15 +7,15 @@
     "dev": "wrangler dev",
     "start": "wrangler dev",
     "test": "vitest --run",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types -c wrangler.example.toml"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.18.0",
-    "@cloudflare/workers-types": "^4.20260617.1",
+    "@cloudflare/vitest-pool-workers": "^0.20.2",
+    "@types/node": "^26.1.2",
     "typescript": "^7.0.2",
     "vite": "^8.0.16",
     "vitest": "^4.1.9",
-    "wrangler": "^4.101.0"
+    "wrangler": "^4.119.0"
   },
   "dependencies": {
     "hono": "^4.12.23"

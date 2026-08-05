@@ -6,7 +6,6 @@
     "lib": ["es2021"],
     "types": [
       "vitest/globals",
-      "@cloudflare/workers-types",
       "@cloudflare/vitest-pool-workers/types"
     ],
     "isolatedModules": true,
