@@ -22,6 +22,20 @@
   },
   packageRules: [
     {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchDepTypes": [
+        "action"
+      ],
+      "matchFileNames": [
+        ".github/workflows/lockfile-maintenance.yml",
+        ".github/workflows/test-and-deploy.yml",
+        ".github/workflows/actions-lock.yml"
+      ],
+      "pinDigests": false
+    },
+    {
       matchUpdateTypes: ["major"],
       addLabels: ["dependencies:major"],
     },
