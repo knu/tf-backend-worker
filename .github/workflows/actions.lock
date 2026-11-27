@@ -5,10 +5,10 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/actions-lock.yml':
         - 'actions/checkout@v7.0.1'
-        - 'step-security/harden-runner@v2.22.4'
+        - 'step-security/harden-runner@v2.23.0'
     '.github/workflows/lockfile-maintenance.yml':
         - 'knu/lockfile-maintenance-action@v2'
-        - 'step-security/harden-runner@v2.22.4'
+        - 'step-security/harden-runner@v2.23.0'
     '.github/workflows/test-and-deploy.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
@@ -79,9 +79,9 @@ dependencies:
         commit: 'sha1-26e5b7d197ebf60545ee9667bcbace0be11ccaec'
         owner_id: 210414
         repo_id: 231208785
-    'step-security/harden-runner@v2.22.4':
-        ref: 'v2.22.4'
-        commit: 'sha1-1d88384fd173af6ecb012dfd0264a306b711241a'
+    'step-security/harden-runner@v2.23.0':
+        ref: 'v2.23.0'
+        commit: 'sha1-aebdcf6156ab6691adf63218240e476564a1ed4c'
         owner_id: 88700172
         repo_id: 422287306
     'swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6':
